@@ -45,7 +45,7 @@ class _FindDependenciesVisitor extends RecursiveStatementVisitor {
 
   void visitImportRule(ImportRule node) {
     for (var import in node.imports) {
-      if (import is DynamicImport) _imports.add(Uri.parse(import.url));
+      if (import is DynamicImport) _imports.add(import.url);
     }
   }
 }
